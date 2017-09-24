@@ -12,6 +12,7 @@
 		8428FAB71F77D4DC00EFD31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8428FAB51F77D4DC00EFD31F /* Main.storyboard */; };
 		8428FAB91F77D4DC00EFD31F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428FAB81F77D4DC00EFD31F /* Assets.xcassets */; };
 		8428FABC1F77D4DC00EFD31F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8428FABA1F77D4DC00EFD31F /* LaunchScreen.storyboard */; };
+		8428FAC91F78511100EFD31F /* Cars.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8428FAC81F78510D00EFD31F /* Cars.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		8428FAB81F77D4DC00EFD31F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8428FABB1F77D4DC00EFD31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8428FABD1F77D4DC00EFD31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8428FAC71F7850BA00EFD31F /* Cars Model Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Cars Model Files"; sourceTree = "<group>"; };
+		8428FAC81F78510D00EFD31F /* Cars.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Cars.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +57,14 @@
 		8428FAB01F77D4DC00EFD31F /* TradeMyTesla */ = {
 			isa = PBXGroup;
 			children = (
+				8428FAC71F7850BA00EFD31F /* Cars Model Files */,
 				8428FAB11F77D4DC00EFD31F /* AppDelegate.swift */,
 				8428FAB31F77D4DC00EFD31F /* ViewController.swift */,
 				8428FAB51F77D4DC00EFD31F /* Main.storyboard */,
 				8428FAB81F77D4DC00EFD31F /* Assets.xcassets */,
 				8428FABA1F77D4DC00EFD31F /* LaunchScreen.storyboard */,
 				8428FABD1F77D4DC00EFD31F /* Info.plist */,
+				8428FAC81F78510D00EFD31F /* Cars.mlmodel */,
 			);
 			path = TradeMyTesla;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			files = (
 				8428FAB41F77D4DC00EFD31F /* ViewController.swift in Sources */,
 				8428FAB21F77D4DC00EFD31F /* AppDelegate.swift in Sources */,
+				8428FAC91F78511100EFD31F /* Cars.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
