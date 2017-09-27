@@ -44,6 +44,9 @@
                                 <state key="normal" title="PROCEED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7Dg-Ex-eTE" kind="show" id="yKw-R1-vpn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="TeslaRed"/>
@@ -71,9 +74,106 @@
                     <view key="view" contentMode="scaleToFill" id="PuM-wt-5ey">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ra0-CJ-gpK">
+                                <rect key="frame" x="16" y="84" width="343" height="337.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MODEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9do-8U-DJo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-IW-Myd">
+                                        <rect key="frame" x="0.0" y="25.333333333333329" width="343" height="29.000000000000014"/>
+                                        <segments>
+                                            <segment title="Model 3"/>
+                                            <segment title="Second"/>
+                                            <segment title="Model X"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="7Dg-Ex-eTE" eventType="valueChanged" id="QfF-ku-Q95"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREMIUM UPGRADES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrX-Kq-sU9">
+                                        <rect key="frame" x="0.0" y="58.333333333333343" width="343" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-3E-o5K">
+                                        <rect key="frame" x="0.0" y="83.666666666666657" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Installed"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="7Dg-Ex-eTE" eventType="valueChanged" id="PKI-Ke-tNM"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MILEAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCP-wn-ma4">
+                                        <rect key="frame" x="0.0" y="116.66666666666666" width="343" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="0.0" maxValue="200000" translatesAutoresizingMaskIntoConstraints="NO" id="DEB-Mb-O8o">
+                                        <rect key="frame" x="-2" y="142" width="347" height="31"/>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="7Dg-Ex-eTE" eventType="valueChanged" id="wdR-Q3-9pI"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONDITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lp-87-OCc">
+                                        <rect key="frame" x="0.0" y="177" width="343" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-Cl-Cbt">
+                                        <rect key="frame" x="0.0" y="202.33333333333331" width="343" height="29"/>
+                                        <segments>
+                                            <segment title="Poor"/>
+                                            <segment title="Ok"/>
+                                            <segment title="Good"/>
+                                            <segment title="Gread"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="7Dg-Ex-eTE" eventType="valueChanged" id="LqF-CQ-aTz"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRADE YOUR TESLA FOR..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-4B-Nhc">
+                                        <rect key="frame" x="0.0" y="235.33333333333331" width="343" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99,999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aY-o8-Htp">
+                                        <rect key="frame" x="0.0" y="260.66666666666669" width="343" height="76.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" name="TeslaRed"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ra0-CJ-gpK" firstAttribute="leading" secondItem="PuM-wt-5ey" secondAttribute="leadingMargin" id="BZf-xX-C8y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ra0-CJ-gpK" secondAttribute="trailing" id="okD-nG-TAI"/>
+                            <constraint firstItem="Ra0-CJ-gpK" firstAttribute="top" secondItem="PuM-wt-5ey" secondAttribute="topMargin" constant="40" id="uSC-vV-rfH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kOi-L0-hF3"/>
                     </view>
+                    <connections>
+                        <outlet property="condition" destination="QbA-Cl-Cbt" id="Ku0-np-jBM"/>
+                        <outlet property="mileage" destination="DEB-Mb-O8o" id="Rlf-xc-P1t"/>
+                        <outlet property="mileageLabel" destination="UCP-wn-ma4" id="mYN-fL-Irz"/>
+                        <outlet property="model" destination="Foc-IW-Myd" id="wxu-HM-7D4"/>
+                        <outlet property="stackView" destination="Ra0-CJ-gpK" id="Wek-k1-pco"/>
+                        <outlet property="upgrades" destination="k0f-3E-o5K" id="bPi-ek-gjr"/>
+                        <outlet property="valuation" destination="3aY-o8-Htp" id="ITe-07-W8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixl-m2-Te5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
