@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let cars = Cars()
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var model: UISegmentedControl!
     @IBOutlet weak var upgrades: UISegmentedControl!
@@ -34,8 +35,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateValue(_ sender: Any) {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
         
+        let formattedMileage = formatter.string(for: mileage.value) ?? "0"
+        mileageLabel.text = "MILEAGE (\(formattedMileage) miles"
+        
+        //create a prediction by passing in all of the input form the UI
+        if let prediction = try? cars.prediction(model: Double(model.selectedSegmentIndex),
+                                                 premium: Double(upgrades.selectedSegmentIndex),
+                                                 mileage: Double(mileage.value),
+                                                 condition: Double(condition.selectedSegmentIndex)) {
+            
+            //clamp the price so it's at least $2000
+            let clampedValuation = max(2000, prediction.price)
+            
+            //display the valuation
+            formatter.numberStyle = .currency
+            valuation.text = formatter.string(for: clampedValuation)
+        } else {
+            valuation.text = "Error! %&@!"
+        }
     }
-    
 }
 

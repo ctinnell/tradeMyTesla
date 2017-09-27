@@ -88,7 +88,7 @@
                                         <rect key="frame" x="0.0" y="25.333333333333329" width="343" height="29.000000000000014"/>
                                         <segments>
                                             <segment title="Model 3"/>
-                                            <segment title="Second"/>
+                                            <segment title="Model 5"/>
                                             <segment title="Model X"/>
                                         </segments>
                                         <connections>
@@ -104,7 +104,7 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-3E-o5K">
                                         <rect key="frame" x="0.0" y="83.666666666666657" width="343" height="29"/>
                                         <segments>
-                                            <segment title="First"/>
+                                            <segment title="Not Installed"/>
                                             <segment title="Installed"/>
                                         </segments>
                                         <connections>
@@ -135,7 +135,7 @@
                                             <segment title="Poor"/>
                                             <segment title="Ok"/>
                                             <segment title="Good"/>
-                                            <segment title="Gread"/>
+                                            <segment title="Great"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="7Dg-Ex-eTE" eventType="valueChanged" id="LqF-CQ-aTz"/>
